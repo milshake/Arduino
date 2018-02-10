@@ -1,0 +1,16 @@
+const int led = 11;
+//make sure the led connected to one of the marked pin in arduino
+
+void setup() {
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  for(int x = 0; x <= 255; x++) {
+    analogWrite(led, x);
+    delay(5);
+  } for(int x = 255; x >= 0; x--) {
+    analogWrite(led, x);
+    delay(5);
+  }
+ }
