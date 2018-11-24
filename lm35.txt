@@ -1,0 +1,17 @@
+float temp;
+int led13 = 13;
+void setup() {
+  Serial.begin(9600);
+  pinMode(led13, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(led13, LOW);
+  temp = analogRead(A0);
+  temp = temp * 0.48828125;
+  Serial.print("the Temperature is: ");
+  Serial.print(temp);
+  Serial.print("*c");
+  Serial.println();
+  delay(1000);
+}
